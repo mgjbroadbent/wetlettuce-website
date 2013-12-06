@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+
+        <!-- Add .min.css for release -->
+        <link href="s/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="s/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="s/fancybox/jquery.fancybox.css" rel="stylesheet">
+
+<!--        <link href='http://fonts.googleapis.com/css?family=Ruluko|Kaushan+Script' rel='stylesheet' type='text/css'> -->
+        <link href='//fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Fredericka+the+Great&text=I' rel='stylesheet' type='text/css'>
+        
+        <script type="text/javascript">
+(function() {
+    var config = {
+        kitId: 'lsi5uyx',
+        scriptTimeout: 3000
+    };
+    var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+})();
+        </script>
+        <style>
+        .wf-loading {
+            font-family: serif;
+            visibility: hidden;
+        }
+        .wf-active {
+            visibility: visible;
+        }
+        </style>
+        
+        <style>
+            body {
+                font-size: 100%;
+                font-weight: 400;
+                line-height: 150%;
+            }
+            
+            blockquote p {
+                font-size: 112.5%;
+                line-height: 133.33333333%;
+            }
+            
+            blockquote small {
+                line-height: 176.47%;
+            }
+            
+            .words:first-child:first-letter { 
+                float: left;
+                padding-right: 0.25em;
+                padding-left: 0.1em;
+
+                font-family: "Fredericka the Great";
+                font-size: 300%;
+                line-height: 100%;
+                vertical-align: text-top;
+            }
+            
+            p {
+                text-align: justify;
+            }
+            
+            blockquote.pull-right {
+                padding-left: 1em;
+            }
+            
+            article {
+                padding-bottom: 1em;
+            }
+            
+            .wrapper {
+                position: relative;
+            }
+
+            .wt {
+                z-index: 1000;
+                width: 100%;
+                font-family: 'Kaushan Script', cursive;
+                font-weight: 400;
+            }
+            
+            .wt h1 {
+                position: absolute;
+                left: 0.5em;
+                top: 0.5em;
+                font-size: 3em;
+            }
+            
+            .wt h2 {
+                position: absolute;
+                left: 0.5em;
+                bottom: 0.25em;
+                font-size: 1.5em;
+            }
+        </style>        
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="js/html5shim.js"></script>
+        <![endif]-->
+        <!-- remove http: when hosting -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="s/bootstrap/js/bootstrap.min.js"></script>
+        <script src="s/js/jquery.fittext.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row-fluid wrapper">
+                <div class="span12">
+                    <object data="s/img/head_wt_1-1.svg" type="image/svg+xml">
+                        <!--[if lte IE 8]>
+                            <img src="img/head_wt_1-1@1x.jpg" alt="Lettuce Leaves on a white rectangular bowl">
+                        <![endif]-->
+                    </object>
+                    <a class="wt" href="//www.wetlettuce.com/">
+                        <h1 class="wt" id="mast-txt">Wet Lettuce</h1>
+                        <h2 class="wt" id="mast-subtxt">Some witty remark goes here</h2>
+                    </a>
+                </div>
+            </div>
+            <style>
+                .navbar-inner.speckle {
+                    background-image: url(s/img/bg_noise.jpg);
+                    background-color: #000;
+                }
+            </style>
+            <div class="navbar navbar-inverse">
+                <div class="speckle navbar-inner">
+                <div class="container">
+                    <div data-toggle="collapse" data-target=".nav-collapse">
+                        <p class="btn btn-navbar">Menu</p>
+                    </div>
+                    <div class="nav-collapse collapse">
+                    <ul class="nav heading-font">
+                        <li class="active"><a href="/">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Data<b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/data/fuel_consumption">Fuel Consumption</a></li>
+                                <li><a href="/data/electricity_usage">Electricity Usage</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                My Photography<b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://www.broadbentphotography.co.uk/">Broadbent Photography</a></li>
+                                <li><a href="http://500px.com/mbroadbent">500px</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            {{{body}}}
+        </div>
+        <script>
+try {
+            $("#mast-txt").fitText(1.25);
+            $("#mast-subtxt").fitText(3);
+} catch (e) {}
+        </script>
+    </body>
+</html>

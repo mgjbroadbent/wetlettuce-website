@@ -1,0 +1,34 @@
+extends default_v1
+
+block content
+    form(action='/api/add_fuel_data', method='post')
+        .row
+            .span12
+                h1 Add New Fuel Data
+        .row
+            .span12
+                label(for="vehicle_id") Vehicle: 
+                ul
+                    each item in vehicles
+                        li
+                            input(type="checkbox", name="vehicle_id", value="#{id}")
+                                #{name}
+        .row
+            .span12
+                label(for="litres") Litres Added:
+                    input(type="input", name="litres")
+        .row
+            .span12
+                label(for='ppl') Pence per Litre:
+                    input(type="input", name"ppl")
+        .row
+            .span12
+                label(for='miles') Mile Travelled:
+                    input(type="input", name="miles")
+        .row
+            .span12
+                label(for='price') Cost (in pounds):
+                    input(type="input", name='price')
+        .row
+            .span12
+                input(type='submit', name='submit')

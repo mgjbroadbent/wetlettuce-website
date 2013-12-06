@@ -1,0 +1,18 @@
+{{#each articles}}
+<section>
+    <article>
+        <h1>{{title}}</h1>
+        <p>{{timestamp}}</p>
+        <div class="row-fluid">
+            <div class="span8 article-content">
+                {{{preview}}}
+            </div>
+        </div>
+    </article>
+</section>
+{{/each}}
+<script>
+(function() {
+    $('.article-content blockquote').addClass('pull-right');
+})();
+</script>

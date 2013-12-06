@@ -1,0 +1,11 @@
+extends default_v1
+
+block content
+    each item in articles
+        div.row
+            div.span12
+                h2 #{item.title}
+                p
+                    small #{item.timestamp}
+                div.
+                    !{item.preview}

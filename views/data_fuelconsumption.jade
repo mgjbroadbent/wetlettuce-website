@@ -1,0 +1,29 @@
+extends default_v1
+
+block head
+    script(language='Javascript', type='text/javascript', src='/s/js/highcharts.js')
+    script(language='Javascript', type='text/javascript', src='/s/js/fuel_consumption.js')
+
+block content
+    div.row
+        div.span12
+            h1 Fuel Consumption
+
+    if error
+        div.row
+            div.span11.offset1
+                p An error has occurred trying to display this page
+                p #{error}
+    else
+        div.row
+            div.span11.offset1
+                label Select Vehicle: 
+                    select#choose_car
+                        option(value='')
+                        each car in cars
+                            option(value='#{car.id}') #{car.name}
+
+        div.row
+            div.span12
+                div#chart
+            

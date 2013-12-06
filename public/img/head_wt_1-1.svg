@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+   viewBox="0 0 1170 617" preserveAspectRatio="xMidYMid meet">
+
+<title>Lettuce Leaves on a white rectangular bowl</title>
+
+<style>
+svg {
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-image: url(head_wt_1-1@1x.jpg);
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), /* Webkit-based browsers */
+                  (min--moz-device-pixel-ratio: 2),    /* Older Firefox browsers (prior to Firefox 16) */
+                  (min-resolution: 2dppx),             /* The standard way */
+                  (min-resolution: 192dpi)             /* dppx fallback */ 
+                  {
+	svg {
+		background-image: url(head_wt_1-1@2x.jpg);
+	}
+}
+</style>
+</svg>

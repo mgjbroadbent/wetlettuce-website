@@ -1,0 +1,15 @@
+extends default_v1
+
+block head
+	script(language='Javascript', type='text/javascript', src='/s/js/highstock.js')
+	script(language='Javascript', type='text/javascript', src='/s/js/electricity_usage.js')
+
+block content
+	div.row
+		div.span12
+			h1 Electricity Usage
+
+	div.row
+		div.span12
+			div#chart
+			

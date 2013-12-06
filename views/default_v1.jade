@@ -1,0 +1,44 @@
+doctype 5
+html(lang='en')
+    head
+        title #{title}
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        
+        link(href='/s/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+        link(href='/s/css/v1.css', rel='stylesheet')
+        link(href='/s/bootstrap/css/bootstrap-responsive.css', rel='stylesheet')
+        
+        //- Le HTML5 shim, for IE6-8 support of HTML5 elements 
+        //if lt IE 9
+            script(src='/s/js/html5shim.js')
+
+        script(src='//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
+        script(src='/s/bootstrap/js/bootstrap.min.js')
+        script(src='/s/js/wt.js')
+
+        block head
+    body
+        div.navbar.navbar-inverse.navbar-fixed-top
+            div.navbar-inner
+                a.brand(href='/') Wetlettuce
+                ul.nav
+                    li.active
+                        a(href='/') Home
+                    li.dropdown
+                        a.dropdown-toggle(href='#', data-toggle='dropdown') Data
+                            b.caret
+                        ul.dropdown-menu
+                            li
+                                a(href='/data/fuel_consumption') Fuel Consumption
+                            li
+                                a(href='/data/electricity_usage') Electricity Usage
+                    li.dropdown
+                        a.dropdown-toggle(href='#', data-toggle='dropdown') My Photography
+                            b.caret
+                        ul.dropdown-menu
+                            li
+                                a(href='http://www.broadbentphotography.co.uk/') Broadbent Photography
+                            li
+                                a(href='http://www.flickr.com/photos/wetlettuce/') Flickr
+        div.container
+            block content

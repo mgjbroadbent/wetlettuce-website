@@ -1,2 +1,4 @@
-wetlettuce-website
-==================
+wetlettuce
+==========
+
+Wetlettuce.com website

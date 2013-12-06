@@ -1,27 +1,18 @@
 {
-  "name": "wetlettuce-website",
-  "version": "0.1.0",
-  "description": "Wetlettuce.com Website",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/mgjbroadbent/wetlettuce-website.git"
-  },
-  "keywords": [
-    "website"
-  ],
-  "author": "Mark Broadbent <mark@wetlettuce.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mgjbroadbent/wetlettuce-website/issues"
-  },
+  "name": "wetlettuce",
+  "description": "wetlettuce.com",
+  "version": "0.0.1",
+  "private": true,
   "dependencies": {
+    "express": "3.x",
+    "consolidate": "0.9.x",
+    "pg": "0.8.x",
     "async": "0.2.x",
-    "winston": "0.7.x",
-    "express": "3.4.x",
-    "underscore": "~1.5.2"
+    "underscore": "1.x.x",
+    "line-reader": "0.2.x",
+    "express3-handlebars": "0.4.x",
+    "markdown-extra": "0.1.x",
+    "marked": "0.2.x",
+    "exif": "~0.3.3"
   }
 }
