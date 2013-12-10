@@ -4,10 +4,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
 
-        <!-- Add .min.css for release -->
-        <link href="s/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="s/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-        <link href="s/fancybox/jquery.fancybox.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/css/bootstrap.min.css">
+<!-- Optional theme -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/css/bootstrap-theme.min.css">
 
 <!--        <link href='http://fonts.googleapis.com/css?family=Ruluko|Kaushan+Script' rel='stylesheet' type='text/css'> -->
         <link href='//fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
@@ -33,6 +32,9 @@
         </style>
         
         <style>
+            html {
+                font-size: 100%;
+            }
             body {
                 font-size: 100%;
                 font-weight: 400;
@@ -98,17 +100,18 @@
         </style>        
         <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
-        <script src="js/html5shim.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
         <![endif]-->
-        <!-- remove http: when hosting -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script src="s/bootstrap/js/bootstrap.min.js"></script>
-        <script src="s/js/jquery.fittext.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/FitText.js/1.1/jquery.fittext.min.js"></script>
+<script src=""></script>
     </head>
     <body>
         <div class="container">
-            <div class="row-fluid wrapper">
-                <div class="span12">
+            <div class="row wrapper">
+                <div class="col-md-12">
                     <object data="s/img/head_wt_1-1.svg" type="image/svg+xml">
                         <!--[if lte IE 8]>
                             <img src="img/head_wt_1-1@1x.jpg" alt="Lettuce Leaves on a white rectangular bowl">
@@ -116,56 +119,61 @@
                     </object>
                     <a class="wt" href="//www.wetlettuce.com/">
                         <h1 class="wt" id="mast-txt">Wet Lettuce</h1>
-                        <h2 class="wt" id="mast-subtxt">Some witty remark goes here</h2>
+<!--                        <h2 class="wt" id="mast-subtxt">Some witty remark goes here</h2> -->
                     </a>
                 </div>
             </div>
             <style>
-                .navbar-inner.speckle {
+                .navbar.speckle {
                     background-image: url(s/img/bg_noise.jpg);
                     background-color: #000;
                 }
             </style>
-            <div class="navbar navbar-inverse">
-                <div class="speckle navbar-inner">
-                <div class="container">
-                    <div data-toggle="collapse" data-target=".nav-collapse">
-                        <p class="btn btn-navbar">Menu</p>
-                    </div>
-                    <div class="nav-collapse collapse">
-                    <ul class="nav heading-font">
+            <div class="navbar navbar-inverse speckle" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Menu</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
                         <li class="active"><a href="/">Home</a></li>
+{{!
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                Data<b class="caret"></b>
-                            </a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/data/fuel_consumption">Fuel Consumption</a></li>
                                 <li><a href="/data/electricity_usage">Electricity Usage</a></li>
                             </ul>
                         </li>
+}}
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                My Photography<b class="caret"></b>
-                            </a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Photography <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="http://www.broadbentphotography.co.uk/">Broadbent Photography</a></li>
+                                <li><a href="http://flickr.com/photos/wetlettuce">Flickr</a></li>
                                 <li><a href="http://500px.com/mbroadbent">500px</a></li>
                             </ul>
                         </li>
                     </ul>
-                    </div>
-                </div>
                 </div>
             </div>
             
             {{{body}}}
         </div>
         <script>
-try {
-            $("#mast-txt").fitText(1.25);
-            $("#mast-subtxt").fitText(3);
-} catch (e) {}
+$(document).ready(function() {
+    try {
+        $("#mast-txt").fitText(1.25);
+        $("#mast-subtxt").fitText(3);
+    } catch (e) {}
+
+    $('img').addClass("img-responsive");
+});
         </script>
     </body>
 </html>

@@ -13,6 +13,7 @@
     "express3-handlebars": "0.4.x",
     "markdown-extra": "0.1.x",
     "marked": "0.2.x",
-    "exif": "~0.3.3"
+    "exif": "0.3.x",
+    "image-size": "~0.1.16"
   }
 }
