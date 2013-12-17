@@ -70,5 +70,5 @@ app.get('/api/power', route_api.power);
 //    }
 //});
 
-app.listen(3000);
-console.log('Listening on port 3000');
+app.listen(app.get('port'));
+console.log('Listening on port ' + app.get('port'));
